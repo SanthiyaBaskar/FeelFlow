@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Link Shortener</h1>
+        <p class="subtitle">Enter a long URL to get a shortened version</p>
+        
+        <div class="input-section">
+            <input 
+                type="url" 
+                id="urlInput" 
+                placeholder="Enter your long URL here..."
+                autocomplete="off"
+            >
+            <button id="shortenBtn">Shorten</button>
+        </div>
+        
+        <!-- Loading indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Shortening your link...</p>
+        </div>
+        
+        <!-- Error message display -->
+        <div id="errorMessage" class="error-message hidden"></div>
+        
+        <!-- Result display -->
+        <div id="result" class="result hidden">
+            <h3>✅ Your shortened link:</h3>
+            <div class="link-container">
+                <a id="shortLink" href="" target="_blank" rel="noopener noreferrer"></a>
+                <button id="copyBtn" class="copy-btn">Copy</button>
+            </div>
+            <p class="original-url">
+                Original: <span id="originalUrl"></span>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
